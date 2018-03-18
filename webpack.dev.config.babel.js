@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { HotModuleReplacementPlugin } from 'webpack'
 import merge from 'webpack-merge'
 import common from './webpack.common.config.babel'
