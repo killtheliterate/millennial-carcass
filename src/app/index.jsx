@@ -1,8 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
-import One from './one'
-import Two from './two'
+import ImageDrop from './image-drop'
 
-const App = () => <div><One /><Two /></div>
+const App = () => <ImageDrop />
 
 export default hot(module)(App)
