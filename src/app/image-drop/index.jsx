@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
+import { FileInput, Preview } from './views'
 
-class ImageDrop extends Component {
+class ImageDrop extends PureComponent {
   constructor(props) {
     super(props)
     this.state = { fileURL: '' }
@@ -22,11 +23,10 @@ class ImageDrop extends Component {
   render() {
     const { fileURL } = this.state
     const { name } = this.props
-    const preview = <img src={fileURL} alt="preview" />
     return (
       <div>
-        <input className="image-drop" type="file" name={`${name}File`} onChange={e => this.onDrop(e)} />
-        {fileURL ? preview : null}
+        <FileInput name={name} onChange={e => this.onDrop(e)} />
+        <Preview src={fileURL} />
       </div>
     )
   }
