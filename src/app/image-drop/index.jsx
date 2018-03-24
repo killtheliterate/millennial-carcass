@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class ImageDrop extends Component {
   constructor(props) {
@@ -20,15 +21,19 @@ class ImageDrop extends Component {
 
   render() {
     const { fileURL } = this.state
+    const { name } = this.props
     const preview = <img src={fileURL} alt="preview" />
     return (
-      <form method="post" action="" encType="multipart/form-data">
-        <input className="image-drop" type="file" onChange={e => this.onDrop(e)} />
+      <div>
+        <input className="image-drop" type="file" name={`${name}File`} onChange={e => this.onDrop(e)} />
         {fileURL ? preview : null}
-        <button type="submit">Upload</button>
-      </form>
+      </div>
     )
   }
+}
+
+ImageDrop.propTypes = {
+  name: PropTypes.string.isRequired,
 }
 
 export default ImageDrop
