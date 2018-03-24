@@ -1,7 +1,7 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import ImageDrop from './image-drop'
-import './carcass.scss'
+import './styles/carcass.scss'
 
 const Carcass = () => (
   <form method="post" action="" encType="multipart/form-data">

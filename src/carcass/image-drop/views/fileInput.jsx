@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const FileInput = ({ name, onChange }) => (
   <input
-    className="image-drop"
+    className={`${name}-image-drop`}
     type="file"
     name={`${name}File`}
     onChange={onChange}
