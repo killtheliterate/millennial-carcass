@@ -1,8 +1,8 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from './app'
+import Carcass from './carcass'
 
 render(
-  <App />,
+  <Carcass />,
   document.getElementById('app'),
 )

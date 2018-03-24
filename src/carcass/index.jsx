@@ -1,9 +1,9 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 import ImageDrop from './image-drop'
-import './app.scss'
+import './carcass.scss'
 
-const App = () => (
+const Carcass = () => (
   <form method="post" action="" encType="multipart/form-data">
     <ImageDrop name="head" />
     <ImageDrop name="torso" />
@@ -12,4 +12,4 @@ const App = () => (
   </form>
 )
 
-export default hot(module)(App)
+export default hot(module)(Carcass)
